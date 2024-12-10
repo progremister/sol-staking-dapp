@@ -1,6 +1,6 @@
 //! This module defines the entry point for the Solana program.
-//! 
-//! 
+//!
+//!
 //! # Structure
 //! - The `process_instruction` function serves as the program's entry point.
 //! - Incoming instructions are routed to the `process` function for handling.
@@ -16,7 +16,7 @@ use solana_program::{
 
 use crate::processor::process;
 
-entrypoint!(process_instruction); //define Solana entrypoint 
+entrypoint!(process_instruction); //define Solana entrypoint
 
 /// The entry point for the Solana program.
 ///
@@ -62,7 +62,7 @@ entrypoint!(process_instruction); //define Solana entrypoint
 fn process_instruction(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
-    instruction_data: &[u8]
+    instruction_data: &[u8],
 ) -> ProgramResult {
     process(program_id, accounts, instruction_data)
 }
